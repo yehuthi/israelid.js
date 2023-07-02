@@ -1,6 +1,6 @@
 {
   "name": "israelid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Israeli ID number validation",
   "author": "Yehuthi <yehuthith@gmail.com>",
   "license": "MIT OR Apache-2.0",
