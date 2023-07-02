@@ -4,7 +4,7 @@
   "description": "Israeli ID number validation",
   "author": "Yehuthi <yehuthith@gmail.com>",
   "license": "MIT OR Apache-2.0",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "ts-mocha ./test.ts",
