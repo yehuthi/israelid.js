@@ -1,6 +1,6 @@
 /dist
 /.git
 /index.ts
-/test.ts
+*.test.ts
 /tsconfig.json
 /.github
