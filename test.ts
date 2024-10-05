@@ -1,5 +1,6 @@
 import { describe, it } from "mocha";
 import * as israelid from ".";
+/** @ts-ignore */
 import * as assert from "assert";
 
 describe('israelid', () => {
