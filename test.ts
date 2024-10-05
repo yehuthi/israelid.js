@@ -35,12 +35,12 @@ describe('israelid', () => {
 		].forEach(([id, expected]) => assert.equal(israelid.checksum_digit(id!), expected))
 	}),
 	it("complement", () => {
-		[
+		([
 			["123456782", 0],
 			["12345678", 2],
 			["111", 3],
 			["11111", 6],
 			["10", 9],
-		].forEach(([id, expected]) => assert.equal(israelid.control_complement(id!), expected))
+		] satisfies [string, number][]).forEach(([id, expected]) => assert.equal(israelid.control_complement(id!), expected))
 	})
 });
