@@ -17,6 +17,7 @@ export const checksum_digit = (id: string): '0' | '1' | '2' | '3' | '4' | '5' | 
     return rem === 0 ? '0' : String.fromCharCode(58 - rem) as ReturnType<typeof checksum_digit>;
 }
 
+/** Computes a conotrol digit that would make the ID valid. */
 export const control_complement = (id: string): 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 => {
 	const rem = checksum(id) % 10;
 	if (rem == 0) return 0;
