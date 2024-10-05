@@ -1,36 +1,36 @@
 {
-  "name": "israelid",
-  "version": "0.1.1",
-  "description": "Israeli ID number validation",
-  "author": "Yehuthi <yehuthith@gmail.com>",
-  "license": "MIT OR Apache-2.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "test": "npm run build && ts-mocha ./test.ts",
-    "build": "tsc",
-    "prepublish": "build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yehuthi/israelid.js.git"
-  },
-  "keywords": [
-    "israel",
-    "id",
-    "government",
-    "checksum",
-    "validation"
-  ],
-  "bugs": {
-    "url": "https://github.com/yehuthi/israelid.js/issues"
-  },
-  "homepage": "https://github.com/yehuthi/israelid.js#readme",
-  "devDependencies": {
-    "@types/expect": "^24.3.0",
-    "@types/mocha": "^10.0.8",
-    "mocha": "^10.7.3",
-    "ts-mocha": "^10.0.0",
-    "typescript": "^5.6.2"
-  }
+	"name": "israelid",
+	"version": "0.1.1",
+	"description": "Israeli ID number validation",
+	"author": "Yehuthi <yehuthith@gmail.com>",
+	"license": "MIT OR Apache-2.0",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"test": "npm run build && ts-mocha ./test.ts",
+		"build": "tsc",
+		"prepublish": "build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yehuthi/israelid.js.git"
+	},
+	"keywords": [
+		"israel",
+		"id",
+		"government",
+		"checksum",
+		"validation"
+	],
+	"bugs": {
+		"url": "https://github.com/yehuthi/israelid.js/issues"
+	},
+	"homepage": "https://github.com/yehuthi/israelid.js#readme",
+	"devDependencies": {
+		"@types/expect": "^24.3.0",
+		"@types/mocha": "^10.0.8",
+		"mocha": "^10.7.3",
+		"ts-mocha": "^10.0.0",
+		"typescript": "^5.6.2"
+	}
 }
