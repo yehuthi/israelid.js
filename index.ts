@@ -11,7 +11,7 @@ const checksum = (id: string): number => {
 /** Validates the given ID. */
 export const valid = (id: string): boolean => checksum(id) % 10 === 0
 
-/// A digit character.
+/** A digit character. */
 export type DigitChar = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 
 /** Calcualtes the checksum digit for the given ID. */
