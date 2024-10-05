@@ -1,7 +1,6 @@
-import { describe, it } from "mocha";
+import { describe, it, assert } from "vitest"
 import * as israelid from "./dist";
 /** @ts-ignore */
-import * as assert from "assert";
 
 describe('israelid', () => {
 	it("good ids", () => {
