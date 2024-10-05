@@ -1,5 +1,5 @@
 import { describe, it } from "mocha";
-import * as israelid from ".";
+import * as israelid from "./dist";
 /** @ts-ignore */
 import * as assert from "assert";
 
