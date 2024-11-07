@@ -1,6 +1,5 @@
 import { describe, it, assert } from "vitest"
 import israelid, * as Israelid from "./dist";
-/** @ts-ignore */
 
 describe('israelid', () => {
 	it("good ids", () => {
