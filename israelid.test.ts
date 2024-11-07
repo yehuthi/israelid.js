@@ -1,5 +1,5 @@
 import { describe, it, assert } from "vitest"
-import * as israelid from "./dist";
+import israelid, * as Israelid from "./dist";
 /** @ts-ignore */
 
 describe('israelid', () => {
@@ -12,7 +12,7 @@ describe('israelid', () => {
 			"222222226",
 			"333333334",
 			"444444442",
-		].forEach(id => assert.equal(israelid.valid(id), true))
+		].forEach(id => assert.equal(israelid(id), true))
 	});
 	it("bad ids", () => {
 		[
@@ -20,7 +20,7 @@ describe('israelid', () => {
 			"654223991",
 			"999999999",
 			"555555550",
-		].forEach(id => assert.equal(israelid.valid(id), false))
+		].forEach(id => assert.equal(israelid(id), false))
 	}),
 	it("checksum digit", () => {
 		[
@@ -31,7 +31,13 @@ describe('israelid', () => {
 			["22222222", '6'],
 			["33333333", '4'],
 			["44444444", '2'],
-		].forEach(([id, expected]) => assert.equal(israelid.checksum_digit(id!), expected))
+		].forEach(([id, expected]) =>
+			assert.equal(
+				Israelid.checksum_digit(
+					Israelid.checksum(id)),
+					expected
+				)
+			)
 	}),
 	it("complement", () => {
 		([
@@ -40,6 +46,11 @@ describe('israelid', () => {
 			["111", 3],
 			["11111", 6],
 			["10", 9],
-		] satisfies [string, number][]).forEach(([id, expected]) => assert.equal(israelid.control_complement(id!), expected))
+		] satisfies [string, number][]).forEach(([id, expected]) =>
+			assert.equal(
+				Israelid.control_complement(Israelid.checksum(id), id.length),
+				expected
+			)
+		);
 	})
 });
