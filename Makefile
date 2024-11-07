@@ -15,5 +15,13 @@ doc:
 		--out ./dist/docs                                                 \
 		--plugin typedoc-github-theme
 
+doc-publish: doc
+	pnpx gh-pages                                                         \
+		-d dist/docs                                                      \
+		-b gh-pages                                                       \
+		-m "docs"                                                         \
+		--nojekyll --no-history
+
 clean:
 	rm -rf ./dist
+
